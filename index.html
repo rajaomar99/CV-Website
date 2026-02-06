@@ -10,7 +10,7 @@
     <header class="site-header">
       <div class="container header-grid">
         <div class="header-text">
-          <p class="eyebrow">Curriculum Vitae</p>
+          <p class="cv">Curriculum Vitae</p>
           <h1 class="name">Raja Omar Kamran</h1>
           <p class="title">Full Stack Developer</p>
           <div class="quick-info">
@@ -21,6 +21,7 @@
 
           <div class="header-actions">
             <a class="btn download-btn" href="/images/raja-omar-cv.pdf" download>Download CV</a>
+            <button class="btn toggle-btn" id="theme-toggle" type="button">Dark Mode</button>
           </div>
           
         </div>
@@ -50,12 +51,12 @@
             <div class="card">
               <h3>BS Computer Science</h3>
               <p>FAST NUCES Lahore</p>
-              <p class="muted">2023 — 2027</p>
+              <p>2023 — 2027</p>
             </div>
             <div class="card">
               <h3>Alevels</h3>
               <p>LACAS</p>
-              <p class="muted">2021 — 2023</p>
+              <p>2021 — 2023</p>
             </div>
           </div>
 
@@ -202,11 +203,19 @@
     <script>
       const contactForm = document.getElementById("contact-form");
       const successMessage = document.getElementById("form-success");
+      const themeToggle = document.getElementById("theme-toggle");
 
       contactForm.addEventListener("submit", (event) => {
         event.preventDefault();
         successMessage.textContent = "Form submitted successfully";
         contactForm.reset();
+      });
+
+      themeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        themeToggle.textContent = document.body.classList.contains("dark-mode")
+          ? "Light Mode"
+          : "Dark Mode";
       });
     </script>
   </body>

@@ -20,7 +20,7 @@ img {
 }
 
 .site-header {
-  background: linear-gradient(135deg, #e6ebf7 0%, #fdfdff 70%);
+  background-color: #e6ebf7;
   padding: 4rem 0 3rem;
 }
 
@@ -50,7 +50,7 @@ img {
   box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
 }
 
-.eyebrow {
+.cv {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   font-size: 0.72rem;
@@ -82,10 +82,18 @@ img {
 .header-actions {
   margin-top: 1.5rem;
   font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .download-btn {
   text-decoration: none;
+}
+
+.toggle-btn {
+  background: #e7e8ff;
+  color: #17146e;
 }
 
 .section {
@@ -255,6 +263,66 @@ img {
 
 .btn:hover{
     background-color: #1f1b8a;
+}
+
+body.dark-mode {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark-mode .site-header {
+  background-color: #111827;
+}
+
+body.dark-mode .section.alt {
+  background: #111827;
+}
+
+body.dark-mode .card,
+body.dark-mode .timeline-item,
+body.dark-mode .contact-card,
+body.dark-mode .contact-form {
+  background: #111827;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+body.dark-mode .skills span {
+  border-color: #312e81;
+  color: #e0e7ff;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #0f172a;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+body.dark-mode .contact-form label,
+body.dark-mode .section h2,
+body.dark-mode .timeline-role,
+body.dark-mode .card h3,
+body.dark-mode .contact-card h3,
+body.dark-mode .name {
+  color: #f8fafc;
+}
+
+body.dark-mode .title,
+body.dark-mode .quick-info,
+body.dark-mode .eyebrow,
+body.dark-mode .timeline-meta,
+body.dark-mode .site-footer {
+  color: #cbd5f5;
+}
+
+body.dark-mode .site-footer {
+  background: #111827;
+}
+
+body.dark-mode .toggle-btn {
+  background: #2a2f5a;
+  color: #e5e7eb;
 }
 
 .form-success {
